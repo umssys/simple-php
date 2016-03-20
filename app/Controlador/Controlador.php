@@ -7,7 +7,7 @@ use core\app_core;
 class Controlador extends app_core {
 
     public function __construct($auth = false) {
-        $auth ? true : die('Access Denied');
+        $auth ? true : die('Access Denied.');
         parent::__construct(true);
     }
 
