@@ -2,8 +2,6 @@
 
 namespace core;
 
-use app\Controlador\inicio;
-
 session_start();
 
 use core\system\Compilador;
@@ -15,11 +13,12 @@ abstract class app_core extends Compilador {
         parent::__construct(true);
     }
 
-    protected function iniciarModulo($modulo) {
+    protected function iniciarModulo($modulo) {        
         $modulos=[
-            "inicio" => "app\\Controlador\\inicio\\inicioControl"
+            "Inicio" => "app\\Controlador\\Inicio\\inicioControl"
         ];
-        return $modulos[$modulo];
+        $moduloCarga = @$modulos[$modulo] ? $modulos[$modulo] : die('Access Denied');
+        return $moduloCarga;
     }
 
 }

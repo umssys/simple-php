@@ -5,7 +5,10 @@ namespace app\Controlador;
 use core\app_core;
 
 class Controlador extends app_core {
-
+    
+    public $router;
+    
+    
     public function __construct($auth = false) {
         $auth ? true : die('Access Denied');
         parent::__construct(true);
@@ -14,13 +17,15 @@ class Controlador extends app_core {
     public function iniciarApp() {
         $RequestUri = substr($this->server->leer("REQUEST_URI"), 1);
         $moduloStr = substr($RequestUri, 0, strpos($RequestUri, '/'));
-        empty($moduloStr) ? $moduloStr="inicio" : $moduloStr;
+        empty($moduloStr) ? $moduloStr="Inicio" : $moduloStr;
         $this->cargarModulo($moduloStr);
     }
 
     private function cargarModulo($moduloStr) {
         $moduloPath=$this->iniciarModulo($moduloStr);
-        $modulo=new $moduloPath();        
+        $modulo=new $moduloPath($this);
+        $archivoConf = $this->server->leer('DOCUMENT_ROOT') . '/app/Controlador/' . $moduloStr . '/Conf/Router.yml';
+        
     }
 
     private function cargarHTML() {
@@ -36,7 +41,7 @@ class Controlador extends app_core {
         return $pagina;
     }
 
-    private function leerRouter() {
+    private function leerRouter($Class =  null) {
         
     }
 
