@@ -1,0 +1,35 @@
+<div class="forma">
+    <h2>Administración:</h2>	
+    <form id="torneo" method="POST">
+        <fieldset><legend>Información básica</legend>
+            <input type="text" id="id" name="id">
+            <label>Liga:
+                <select id="liga_id" name="liga_id"></select></label>
+            <label>Equipo:
+                <select id="equipo_id" name="equipo_id"></select></label>
+            <label>Estado:
+                <select id="estado" name="estado">
+                    <option value="A">Activo</option>
+                    <option value="I">Inactivo</option>
+                </select></label>            
+            <div class="botonera">
+                <button type="button" id="cmdNuevo">Nuevo</button>
+                <button type="submit">Guardar</button>
+                <button type="button" id="cmdCancelar">Cancelar</button>
+                <button type="button" id="cmdEliminar">Eliminar</button>
+            </div>
+        </fieldset>
+    </form>
+    <h3>Lista de Torneos</h3>
+    <table id="tblTorneo">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Liga</th>
+                <th>Equipo</th>                
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>

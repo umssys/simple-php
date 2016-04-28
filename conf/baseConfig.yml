@@ -1,7 +1,0 @@
-data:
-    server: localhost
-    username: avtrempusr
-    userpass: Avtr2015
-    schema: avtrempdb
-    server_port: 3306
-    
