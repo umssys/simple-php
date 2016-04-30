@@ -124,10 +124,10 @@ var Application = function (modulo) {
     };
     this.cargarTabla = cargarTabla;
     
-    this.cargarSelect = function (inputStr, r, s=true) {
+    this.cargarSelect = function (inputStr, r, s) {
         var inputStr = inputStr;
         var input = $('#' + inputStr);
-        var s = s;
+        s = s || true;
         input.empty();
         
         if (s){

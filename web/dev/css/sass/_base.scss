@@ -1,0 +1,271 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29/04/2016, 09:23:12 AM
+    Author     : jorge.ubaque
+*/
+
+/* CSS Document */
+
+
+html,body{
+    background:#fff;
+    width:100%;
+    font-family:verdana,sans;
+    font-size:12px;
+    margin:0px;
+}
+
+h1{
+    color:#000;
+    width:100%;
+    text-align:center;
+    font-size:18px;
+    margin:0px;
+    padding:0px;
+}
+
+h2{
+    margin:0px;
+    padding:0px;
+    padding-bottom: 10px;
+    color:#000;
+    text-align:center;
+    background:#f0f0f0;
+}
+h3{
+    color:#000;
+    text-align:center;
+}
+
+div.maestra{
+    width:100%;
+    max-width:100%;
+    text-align:center;
+    display:block;
+}
+div.contenido{
+    background:#fff;
+    position:relative;
+    display:inline-block;
+    width:1000px;
+    max-width:100%;
+}
+
+nav{
+    background: #fff;
+    height: 40px;
+
+    ul{
+        list-style: none;
+
+        li {
+            display: inline-block;
+            width: 150px;
+            height: 30px;
+            background: #fff;
+
+            a {
+                text-decoration: none;
+                color: #000;
+                font-weight: bold;
+                display: block;
+                width: 100%;
+                height: 100%;
+                vertical-align: middle;
+                padding-top: 5px;
+                padding-bottom: -5px;
+                &:active{
+                    color: #000;
+                }
+                &:link{
+                    color: #000;
+                }
+                &:visited{
+                    color: #000;
+                }
+            }         
+        }
+    }
+
+}
+
+
+
+form{
+    width:90%;
+    display:inline-block;
+    text-align:left;
+
+    fieldset{
+        border-color:#000;
+        border-radius:5px;
+
+        legend{
+            color:#000;
+            font-weight:bold;
+        }
+    }
+
+    input,select,textarea{
+        font-family:verdana,sans;
+        border:0px;
+        border-bottom:1px solid #bbb;
+        background: transparent;
+        color: #000;
+    }
+    label input .archivo{
+        width: 130px;
+    }
+
+    label{
+        position:relative;
+        display:inline-block;
+        width:200px;
+        margin:5px;
+        text-align:left;
+        color:#000;
+        overflow:visible;
+        height:50px;
+        vertical-align: top;
+        font-weight: bold;
+    }
+
+    label input,select,textarea{
+        display:block;
+        width:100%;
+        height:30px;
+        background:#fff;
+    }
+
+    button{
+        background: #fff;
+        border: none;
+        width: 130px;
+        height: 30px;
+        border-radius: 8px;
+        vertical-align:top;
+    }
+    .botonera{
+        width:100%;
+        text-align:center;
+    }
+
+    #login{
+        width:500px;
+        height:150px;
+        text-align: center;    
+        position: absolute;
+        bottom:100px;
+        left:50%;
+        z-index: 99;
+        background: #fff;
+        border-radius: 10px;
+        display: none;
+    }
+    #login legend{
+        color: #000;
+    }
+}
+
+
+
+#toggleIniciarSesion{
+    position: absolute;
+    top:0px;
+    right:5px;
+    color:#000;
+    background:#fff;
+    width:120px;
+    height: 30px;
+    border: none;    
+}
+
+table{
+    display:inline-table;
+    width:800px;
+    max-width:100%;
+    border:1px;
+    cursor:default;
+    position: relative;
+
+    a{
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+        &:visited, &:link, &:active{
+            color: #000;
+            text-decoration: none;
+        }
+    }
+
+
+    thead{
+        background:#fff;
+        color:#fff;
+    }
+
+    tbody {
+        tr {
+            background:#fff;
+            &:hover{
+                background:#fff;
+            }
+            td{
+                position: relative;
+            }
+        }
+    }
+}
+
+.FechaSelector{
+    position:absolute;
+    top:30px;
+    left:0px;
+    z-index:99;
+    background:#fff;
+    border:1px #ddd solid;
+    border-radius:5px;
+    
+    select{
+        width:60px;
+        display:inline;
+    }
+    
+}
+
+
+.boton_carga {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:9px;
+    color:#000000;
+    width:79px;
+    height:30px;
+    text-align:center;
+    background-image:url(../images/cargararchivo.png);
+    background-repeat:no-repeat;	
+    font-weight:bold;
+    padding-top:2px;
+    margin:auto;
+    cursor:pointer;	
+    padding-top:15px;
+    display:inline;
+    overflow:auto;
+    position:absolute;
+    top: 12px;
+    right: 0px;
+    &:hover{
+        color:#999;
+    }
+}
+
+
+.boton_carga_campo{
+    width:130px !important;
+    height:30px;
+    text-decoration:underline;
+    color:#000080;
+}
