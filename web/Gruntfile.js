@@ -9,15 +9,17 @@ module.exports = function (grunt) {
                 src: 'app/vista/css/main.css'
             }
         },
-        sass_import: {
-            options: {},
-            dist: {
-                options: {
-                    basePath: 'dev/css/sass/'
-                },
-                files: {
-                    'main.scss': [{path: 'modulo\/*', first: '_base.scss'}]
-                }
+        sass_compile_imports: {
+            options: {
+                importPath: 'modulo/'
+            },
+            compile: {
+                target: 'dev/css/sass/_imported.scss',
+                files: [{
+                        expand: true,
+                        cwd: 'dev/css/sass/modulo/',
+                        src: ['**/*.scss']
+                    }]
             }
         },
         compile: {
@@ -74,7 +76,7 @@ module.exports = function (grunt) {
             },
             sassPcagenda: {
                 files: ['dev/css/**/*.scss'],
-                tasks: ['sass_import', 'compass:main_pcagenda']
+                tasks: ['sass_compile_imports:compile', 'compass:main_pcagenda']
             },
         },
     });
@@ -89,7 +91,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-webfont');
-    grunt.loadNpmTasks('grunt-sass-import');
+    grunt.loadNpmTasks('grunt-sass-compile-imports');
     // Default task
     grunt.registerTask('default', [
         'compass',
