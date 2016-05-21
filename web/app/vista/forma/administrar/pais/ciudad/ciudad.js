@@ -1,7 +1,7 @@
 var Modulo = function () {
     var resultContainer = 'tblPais';
     var formulario = $('#pais');
-    var module = "administrar_pais";
+    var module = "ciudad";
 
     this.inicializarFormulario = function () {
         $('#id').hide();
