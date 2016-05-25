@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . "/../../data/db.php";
+require $_SERVER['DOCUMENT_ROOT'] . "app/data/db.php";
 
 class ventaModel {
 

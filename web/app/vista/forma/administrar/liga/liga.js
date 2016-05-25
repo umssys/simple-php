@@ -1,7 +1,7 @@
 var Modulo = function () {
     var resultContainer = 'tblLiga';
     var formulario = $('#liga');
-    var module = "administrar_liga";
+    var module = "liga";
 
     this.inicializarFormulario = function () {
         $('#id').hide();

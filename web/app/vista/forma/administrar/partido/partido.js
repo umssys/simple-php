@@ -1,7 +1,7 @@
 var Modulo = function () {
     var resultContainer = 'tblPartido';
     var formulario = $('#partido');
-    var module = "administrar_partido";
+    var module = "partido";
 
 
     this.inicializarFormulario = function () {

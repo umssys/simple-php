@@ -1,7 +1,7 @@
 var Modulo = function () {
     var resultContainer = 'tblParametro';
     var formulario = $('#parametro');
-    var module = "administrar_parametro";
+    var module = "parametro";
 
     this.inicializarFormulario = function () {
                

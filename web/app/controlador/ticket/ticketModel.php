@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . "/../../data/db.php";
+require $_SERVER['DOCUMENT_ROOT'] . "app/data/db.php";
 
 class ticketModel {
 
@@ -28,7 +28,6 @@ class ticketModel {
             $this->setResult('El número de ticket no es válido', 'error');
             return false;
         }
-
         $consulta = "";
         switch ($P['tipo']) {
             case "ticket_info":
@@ -65,7 +64,6 @@ class ticketModel {
                 //echo "parametros";
                 break;
         }
-
         $this->dbo->conectar();
         $res = $this->dbo->consultar($consulta);
         $this->dbo->desconectar();
@@ -107,7 +105,6 @@ class ticketModel {
                                    
             where id= " . $P['id'] . "
                     ";
-
         $this->dbo->conectar();
         if (!$this->dbo->ejecutar($consulta)) {
             $this->setResult('Error al editar el registro', 'error');

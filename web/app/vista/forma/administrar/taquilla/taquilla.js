@@ -1,7 +1,7 @@
 var Modulo = function () {
     var resultContainer = 'tblTaquilla';
     var formulario = $('#taquilla');
-    var module = "administrar_taquilla";
+    var module = "taquilla";
 
     this.inicializarFormulario = function () {
         $('#id').hide();
