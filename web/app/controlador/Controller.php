@@ -1,6 +1,6 @@
 <?php
 
-class Controlador {
+class Controller {
 
     private $Modules;
     private $rootDir;
@@ -38,14 +38,13 @@ class Controlador {
             $mod .= '/' . $r;
         }
         $pageContent = file_get_contents($this->rootDir . 'app/vista/masterpage.html');
-        $modulePath = $this->rootDir . 'app/vista/forma' . $mod . '/' . $archivo . '.html';
+        $modulePath = 'app/vista/forma' . $mod . '/' . $archivo . '.html';
         $moduleContent = null;
         if (\file_exists($modulePath)) {
             $moduleContent = file_get_contents($modulePath);
         } else {
-            header('HTTP/1.1 404 Not Found');
-            header('La pagina solicitada no se encuentra disponible o fue eliminada', true, 404);
-            header('Location: /public/error-404.html');
+            header('HTTP/1.1 404 Not Found');           
+            echo file_get_contents('public/error-404.html');
             return false;
         }
         $menu = file_get_contents($this->rootDir . 'app/vista/assets/menu.admin.html');
