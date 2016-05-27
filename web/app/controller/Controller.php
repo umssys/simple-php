@@ -37,8 +37,8 @@ class Controller {
         foreach ($this->Modules as $r) {
             $mod .= '/' . $r;
         }
-        $pageContent = file_get_contents($this->rootDir . 'app/vista/masterpage.html');
-        $modulePath = 'app/vista/forma' . $mod . '/' . $archivo . '.html';
+        $pageContent = file_get_contents($this->rootDir . 'app/view/masterpage.html');
+        $modulePath = 'app/view/forma' . $mod . '/' . $archivo . '.html';
         $moduleContent = null;
         if (\file_exists($modulePath)) {
             $moduleContent = file_get_contents($modulePath);
@@ -47,7 +47,7 @@ class Controller {
             echo file_get_contents('public/error-404.html');
             return false;
         }
-        $menu = file_get_contents($this->rootDir . 'app/vista/assets/menu.admin.html');
+        $menu = file_get_contents($this->rootDir . 'app/view/assets/menu.admin.html');
         $render = str_replace(['##MENUPRINCIPAL##', '##CONTENIDOS##', '##MODULO##', '##MODULOJS##', '##HOSTNAME##'], [$menu, $moduleContent, $archivo, $mod, $this->hostName], $pageContent);
         return $render;
     }
@@ -61,8 +61,8 @@ class Controller {
             $archivo = 'modulo/' . $submodulo . '/' . substr($ms, strpos($ms, '/') + 1);
             $mod = substr($ms, 0, strpos($ms, '/'));
         }
-        $pageContent = file_get_contents('app/vista/pagmaestra.html');
-        $moduleContent = file_get_contents('app/vista/forma/inicio/login.html');
+        $pageContent = file_get_contents('app/view/pagmaestra.html');
+        $moduleContent = file_get_contents('app/view/forma/inicio/login.html');
         $render = str_replace(['##CONTENIDOS##', '##MODULO##', '##MODULOJS##'], [$moduleContent, $archivo, $mod], $pageContent);
         return $render;
     }
@@ -89,8 +89,8 @@ class Controller {
         }
         $module = $path . '/' . $_POST['modulo'];
         $accion = $_POST['accion'];
-        require "app/controlador" . $module . '/' . $_POST['modulo'] . "Controller.php";
-        require "app/controlador" . $module . '/' . $_POST['modulo'] . "Model.php";
+        require "app/controller/modules" . $module . '/' . $_POST['modulo'] . "Controller.php";
+        require "app/controller/modules" . $module . '/' . $_POST['modulo'] . "Model.php";
         $clase = $_POST['modulo'] . "Controller";
         new $clase(true, $accion);
     }

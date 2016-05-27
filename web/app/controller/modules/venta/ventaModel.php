@@ -1,6 +1,6 @@
 <?php
 
-require $_SERVER['DOCUMENT_ROOT'] . "app/data/db.php";
+require $_SERVER['DOCUMENT_ROOT'] . "app/model/db.php";
 
 class ventaModel {
 
