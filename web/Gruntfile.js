@@ -6,7 +6,7 @@ module.exports = function (grunt) {
             options: {
             },
             no_dest: {
-                src: 'app/vista/css/main.css'
+                src: 'app/view/css/main.css'
             }
         },
         sass_compile_imports: {
@@ -24,14 +24,14 @@ module.exports = function (grunt) {
         },
         compile: {
             options: {
-                cssDir: 'app/vista/css/'
+                cssDir: 'app/view/css/'
             }
         },
         compass: {
             main_pcagenda: {
                 options: {
                     sassDir: 'dev/css/sass/',
-                    cssDir: 'app/vista/css/'
+                    cssDir: 'app/view/css/'
                 }
             },
         },
@@ -65,7 +65,7 @@ module.exports = function (grunt) {
         uglify: {
             my_target: {
                 files: {
-                    'app/vista/css/uglify': ['app/vista/css/uglify/uglifed/*']
+                    'app/view/css/uglify': ['app/view/css/uglify/uglifed/*']
                 }
             }
         },
