@@ -38,7 +38,7 @@ class Controller {
             $mod .= '/' . $r;
         }
         $pageContent = file_get_contents($this->rootDir . 'app/view/masterpage.html');
-        $modulePath = 'app/view/forma' . $mod . '/' . $archivo . '.html';
+        $modulePath = 'app/view/forms' . $mod . '/' . $archivo . '.html';
         $moduleContent = null;
         if (\file_exists($modulePath)) {
             $moduleContent = file_get_contents($modulePath);
@@ -62,7 +62,7 @@ class Controller {
             $mod = substr($ms, 0, strpos($ms, '/'));
         }
         $pageContent = file_get_contents('app/view/pagmaestra.html');
-        $moduleContent = file_get_contents('app/view/forma/inicio/login.html');
+        $moduleContent = file_get_contents('app/view/forms/inicio/login.html');
         $render = str_replace(['##CONTENIDOS##', '##MODULO##', '##MODULOJS##'], [$moduleContent, $archivo, $mod], $pageContent);
         return $render;
     }
