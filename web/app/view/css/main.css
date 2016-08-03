@@ -59,32 +59,36 @@ div.contenido {
   display: inline-block;
   width: 800px;
   max-width: 100%;
+  height: 600px;
+  max-height: 100%;
   vertical-align: top;
 }
 
-/* line 60, ../../../dev/css/sass/_base.scss */
+/* line 62, ../../../dev/css/sass/_base.scss */
 .menuprincipal {
   vertical-align: top;
   display: inline-block;
   width: 200px;
+  height: 100%;
 }
-/* line 66, ../../../dev/css/sass/_base.scss */
+/* line 69, ../../../dev/css/sass/_base.scss */
 .menuprincipal nav {
   background: #fff;
   height: 40px;
+  height: 100%;
 }
-/* line 70, ../../../dev/css/sass/_base.scss */
+/* line 74, ../../../dev/css/sass/_base.scss */
 .menuprincipal nav ul {
   list-style: none;
 }
-/* line 73, ../../../dev/css/sass/_base.scss */
+/* line 77, ../../../dev/css/sass/_base.scss */
 .menuprincipal nav ul li {
   display: inline-block;
   width: 150px;
   height: 30px;
   background: #fff;
 }
-/* line 79, ../../../dev/css/sass/_base.scss */
+/* line 83, ../../../dev/css/sass/_base.scss */
 .menuprincipal nav ul li a {
   text-decoration: none;
   text-align: left;
@@ -97,43 +101,48 @@ div.contenido {
   padding-top: 5px;
   padding-bottom: -5px;
 }
-/* line 90, ../../../dev/css/sass/_base.scss */
+/* line 94, ../../../dev/css/sass/_base.scss */
 .menuprincipal nav ul li a:active {
   color: #000;
 }
-/* line 93, ../../../dev/css/sass/_base.scss */
+/* line 97, ../../../dev/css/sass/_base.scss */
 .menuprincipal nav ul li a:link {
   color: #000;
 }
-/* line 96, ../../../dev/css/sass/_base.scss */
+/* line 100, ../../../dev/css/sass/_base.scss */
 .menuprincipal nav ul li a:visited {
   color: #000;
 }
 
-/* line 106, ../../../dev/css/sass/_base.scss */
+/* line 110, ../../../dev/css/sass/_base.scss */
 .footer {
-  position: relative;
+  position: fixed;
   display: block;
-  width: 1000px;
+  width: 100%;
+  height: 50px;
+  bottom: 0px;
+  left: 0px;
+  text-align: center;
+  background: #efefef;
 }
 
-/* line 113, ../../../dev/css/sass/_base.scss */
+/* line 122, ../../../dev/css/sass/_base.scss */
 form {
   width: 90%;
   display: inline-block;
   text-align: left;
 }
-/* line 118, ../../../dev/css/sass/_base.scss */
+/* line 127, ../../../dev/css/sass/_base.scss */
 form fieldset {
   border-color: #000;
   border-radius: 5px;
 }
-/* line 122, ../../../dev/css/sass/_base.scss */
+/* line 131, ../../../dev/css/sass/_base.scss */
 form fieldset legend {
   color: #000;
   font-weight: bold;
 }
-/* line 128, ../../../dev/css/sass/_base.scss */
+/* line 137, ../../../dev/css/sass/_base.scss */
 form input, form select, form textarea {
   font-family: verdana,sans;
   border: 0px;
@@ -141,11 +150,11 @@ form input, form select, form textarea {
   background: transparent;
   color: #000;
 }
-/* line 135, ../../../dev/css/sass/_base.scss */
+/* line 144, ../../../dev/css/sass/_base.scss */
 form label input .archivo {
   width: 130px;
 }
-/* line 139, ../../../dev/css/sass/_base.scss */
+/* line 148, ../../../dev/css/sass/_base.scss */
 form label {
   position: relative;
   display: inline-block;
@@ -158,28 +167,28 @@ form label {
   vertical-align: top;
   font-weight: bold;
 }
-/* line 152, ../../../dev/css/sass/_base.scss */
+/* line 161, ../../../dev/css/sass/_base.scss */
 form label input, form select, form textarea {
   display: block;
   width: 100%;
   height: 30px;
   background: #fff;
 }
-/* line 159, ../../../dev/css/sass/_base.scss */
+/* line 168, ../../../dev/css/sass/_base.scss */
 form button {
   background: #fff;
-  border: none;
+  border: 1px solid #000;
   width: 130px;
   height: 30px;
   border-radius: 8px;
   vertical-align: top;
 }
-/* line 167, ../../../dev/css/sass/_base.scss */
+/* line 176, ../../../dev/css/sass/_base.scss */
 form .botonera {
   width: 100%;
   text-align: center;
 }
-/* line 172, ../../../dev/css/sass/_base.scss */
+/* line 181, ../../../dev/css/sass/_base.scss */
 form #login {
   width: 500px;
   height: 150px;
@@ -192,12 +201,12 @@ form #login {
   border-radius: 10px;
   display: none;
 }
-/* line 184, ../../../dev/css/sass/_base.scss */
+/* line 193, ../../../dev/css/sass/_base.scss */
 form #login legend {
   color: #000;
 }
 
-/* line 191, ../../../dev/css/sass/_base.scss */
+/* line 200, ../../../dev/css/sass/_base.scss */
 #toggleIniciarSesion {
   position: absolute;
   top: 0px;
@@ -209,7 +218,7 @@ form #login legend {
   border: none;
 }
 
-/* line 202, ../../../dev/css/sass/_base.scss */
+/* line 211, ../../../dev/css/sass/_base.scss */
 table {
   display: inline-table;
   width: 800px;
@@ -218,36 +227,36 @@ table {
   cursor: default;
   position: relative;
 }
-/* line 210, ../../../dev/css/sass/_base.scss */
+/* line 219, ../../../dev/css/sass/_base.scss */
 table a {
   color: #000;
   text-decoration: none;
   font-weight: bold;
 }
-/* line 214, ../../../dev/css/sass/_base.scss */
+/* line 223, ../../../dev/css/sass/_base.scss */
 table a:visited, table a:link, table a:active {
   color: #000;
   text-decoration: none;
 }
-/* line 221, ../../../dev/css/sass/_base.scss */
+/* line 230, ../../../dev/css/sass/_base.scss */
 table thead {
   background: #fff;
   color: #fff;
 }
-/* line 227, ../../../dev/css/sass/_base.scss */
+/* line 236, ../../../dev/css/sass/_base.scss */
 table tbody tr {
   background: #fff;
 }
-/* line 229, ../../../dev/css/sass/_base.scss */
+/* line 238, ../../../dev/css/sass/_base.scss */
 table tbody tr:hover {
   background: #fff;
 }
-/* line 232, ../../../dev/css/sass/_base.scss */
+/* line 241, ../../../dev/css/sass/_base.scss */
 table tbody tr td {
   position: relative;
 }
 
-/* line 239, ../../../dev/css/sass/_base.scss */
+/* line 248, ../../../dev/css/sass/_base.scss */
 .FechaSelector {
   position: absolute;
   top: 30px;
@@ -257,13 +266,13 @@ table tbody tr td {
   border: 1px #ddd solid;
   border-radius: 5px;
 }
-/* line 248, ../../../dev/css/sass/_base.scss */
+/* line 257, ../../../dev/css/sass/_base.scss */
 .FechaSelector select {
   width: 60px;
   display: inline;
 }
 
-/* line 256, ../../../dev/css/sass/_base.scss */
+/* line 265, ../../../dev/css/sass/_base.scss */
 .boton_carga {
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 9px;
@@ -284,12 +293,12 @@ table tbody tr td {
   top: 12px;
   right: 0px;
 }
-/* line 275, ../../../dev/css/sass/_base.scss */
+/* line 284, ../../../dev/css/sass/_base.scss */
 .boton_carga:hover {
   color: #999;
 }
 
-/* line 281, ../../../dev/css/sass/_base.scss */
+/* line 290, ../../../dev/css/sass/_base.scss */
 .boton_carga_campo {
   width: 130px !important;
   height: 30px;
